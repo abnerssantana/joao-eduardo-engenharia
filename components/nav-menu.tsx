@@ -1,15 +1,10 @@
 "use client"
-
-import * as React from "react"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
@@ -19,6 +14,7 @@ import { Logo } from "./logo"
 
 const sections = [
   { name: "Serviços", href: "#services" },
+  { name: "Gerenciamento", href: "#project-management" },
   { name: "Projetos", href: "#projects-timeline" },
   { name: "Galeria", href: "#gallery" },
   { name: "Depoimentos", href: "#testimonials" },

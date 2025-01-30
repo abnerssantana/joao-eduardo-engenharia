@@ -5,63 +5,64 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import Image from "next/image"
+import { Play } from "lucide-react"
 
 const galleryItems = [
   {
     type: "image",
-    src: "/projeto1.jpg?height=600&width=800",
+    src: "/api/placeholder/800/600",
     alt: "Projeto 1",
     description: "Gerenciamento de obra residencial",
-    size: "large", // 2x2
+    size: "large",
   },
   {
     type: "video",
     src: "https://example.com/video1.mp4",
-    poster: "/projeto1.jpg?height=600&width=800",
+    poster: "/api/placeholder/800/600",
     description: "Tour virtual de construção comercial",
-    size: "medium", // 1x2
+    size: "medium",
   },
   {
     type: "image",
-    src: "/projeto2.jpg?height=800&width=600",
+    src: "/api/placeholder/600/800",
     alt: "Projeto 2",
     description: "Reforma de apartamento",
-    size: "small", // 1x1
+    size: "small",
   },
   {
     type: "image",
-    src: "/projeto1.jpg?height=600&width=800",
+    src: "/api/placeholder/800/600",
     alt: "Projeto 3",
     description: "Construção de edifício corporativo",
-    size: "medium", // 1x2
+    size: "medium",
   },
   {
     type: "video",
-    src: "https://example.com/video2.mp4",
-    poster: "/projeto1.jpg?height=600&width=800",
+    src: "video1.mp4",
+    poster: "/api/placeholder/800/600",
     description: "Timelapse de obra industrial",
-    size: "small", // 1x1
+    size: "small",
   },
   {
     type: "image",
-    src: "/projeto1.jpg?height=800&width=600",
+    src: "/api/placeholder/600/800",
     alt: "Projeto 4",
     description: "Reforma de espaço comercial",
-    size: "large", // 2x2
+    size: "large",
   },
   {
     type: "image",
-    src: "/projeto1.jpg?height=600&width=800",
+    src: "/api/placeholder/800/600",
     alt: "Projeto 5",
     description: "Construção de ponte",
-    size: "small", // 1x1
+    size: "small",
   },
   {
     type: "image",
-    src: "/projeto1.jpg?height=800&width=600",
+    src: "projeto1.jpg",
     alt: "Projeto 6",
     description: "Revitalização de praça pública",
-    size: "medium", // 1x2
+    size: "small",
   },
 ]
 
@@ -82,8 +83,6 @@ const getSizeClasses = (size) => {
 }
 
 export default function Gallery() {
-  const [selectedItem, setSelectedItem] = useState(null)
-
   return (
     <section id="gallery" className="py-20 px-4 bg-secondary">
       <div className="container mx-auto">
@@ -92,7 +91,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-light text-center mb-12 text-foreground"
+          className="text-4xl font-light text-center mb-16 text-foreground"
         >
           Galeria de Projetos
         </motion.h2>
@@ -102,7 +101,7 @@ export default function Gallery() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ staggerChildren: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4"
         >
           {galleryItems.map((item, index) => (
             <motion.div
@@ -114,53 +113,51 @@ export default function Gallery() {
                 <DialogTrigger asChild>
                   <Card className="w-full h-full overflow-hidden cursor-pointer group hover:ring-2 hover:ring-primary transition-all duration-300">
                     <CardContent className="p-0 h-full relative">
-                      {item.type === "image" ? (
+                      <div className="relative w-full h-full">
                         <Image
-                          src={item.src || "/projeto1.jpg"}
-                          alt={item.alt || ""}
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-300 group-hover:scale-110"
+                          src={item.type === "image" ? item.src : item.poster}
+                          alt={item.alt || item.description}
+                          className="transition-transform duration-300 group-hover:scale-110 object-cover"
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                          priority={index < 4}
                         />
-                      ) : (
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={item.poster || "/projeto1.jpg"}
-                            alt={item.description}
-                            layout="fill"
-                            objectFit="cover"
-                            className="transition-transform duration-300 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                            </svg>
+                        {item.type === "video" && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <Play className="w-16 h-16 text-white" />
                           </div>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                          <p className="text-white text-sm font-medium">{item.description}</p>
                         </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <p className="text-white text-sm">{item.description}</p>
                       </div>
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl w-full bg-card border-border">
-                  {item.type === "image" ? (
-                    <Image
-                      src={item.src || "/projeto1.jpg"}
-                      alt={item.alt || ""}
-                      width={800}
-                      height={600}
-                      layout="responsive"
-                      objectFit="contain"
-                    />
-                  ) : (
-                    <video controls poster={item.poster} className="w-full">
-                      <source src={item.src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
-                  <p className="mt-4 text-center text-foreground">{item.description}</p>
+                <DialogContent className="max-w-4xl w-full">
+                  <div className="relative w-full aspect-video">
+                    {item.type === "image" ? (
+                      <Image
+                        src={item.src}
+                        alt={item.alt || ""}
+                        className="object-contain"
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        priority
+                      />
+                    ) : (
+                      <video 
+                        controls 
+                        poster={item.poster} 
+                        className="w-full h-full"
+                        preload="metadata"
+                      >
+                        <source src={item.src} type="video/mp4" />
+                        Seu navegador não suporta a reprodução de vídeos.
+                      </video>
+                    )}
+                  </div>
+                  <p className="mt-4 text-center text-foreground text-lg">{item.description}</p>
                 </DialogContent>
               </Dialog>
             </motion.div>

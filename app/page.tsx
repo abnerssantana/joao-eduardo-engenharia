@@ -6,8 +6,6 @@ import Services from "@/components/services"
 import ProjectsTimeline from "@/components/projects-timeline"
 import Gallery from "@/components/gallery"
 import Testimonials from "@/components/testimonials"
-import Team from "@/components/team"
-import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ProjectManagement from "@/components/project-management"
 
@@ -55,9 +53,6 @@ export default function Home() {
         </div>
         <div className="relative z-0">
           <Testimonials />
-        </div>
-        <div className="relative z-0">
-          <Contact />
         </div>
       </main>
       <Footer />
