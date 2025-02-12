@@ -9,56 +9,56 @@ import { Play } from "lucide-react"
 const galleryItems = [
   {
     type: "image",
-    src: "/api/placeholder/800/600",
+    src: "projeto01.jpg",
     alt: "Projeto 1",
     description: "Gerenciamento de obra residencial",
     size: "large",
   },
   {
     type: "video",
-    src: "https://example.com/video1.mp4",
-    poster: "/api/placeholder/800/600",
-    description: "Tour virtual de construção comercial",
+    src: "videovitta.mp4",
+    poster: "videoprojetovitta.jpg",
+    description: "Tour Vitta Parque",
+    size: "medium",
+  },
+  {
+    type: "video",
+    src: "video1.mp4",
+    poster: "thumbvideo.jpg",
+    description: "Reforma de apartamento",
     size: "medium",
   },
   {
     type: "image",
-    src: "/api/placeholder/600/800",
+    src: "projeto02.jpg",
     alt: "Projeto 2",
     description: "Reforma de apartamento",
     size: "small",
   },
   {
     type: "image",
-    src: "/api/placeholder/800/600",
+    src: "projeto03.jpg",
     alt: "Projeto 3",
-    description: "Construção de edifício corporativo",
-    size: "medium",
-  },
-  {
-    type: "video",
-    src: "video1.mp4",
-    poster: "/api/placeholder/800/600",
     description: "Timelapse de obra industrial",
     size: "small",
   },
   {
     type: "image",
-    src: "/api/placeholder/600/800",
+    src: "projeto04.jpg",
     alt: "Projeto 4",
     description: "Reforma de espaço comercial",
     size: "large",
   },
   {
     type: "image",
-    src: "/api/placeholder/800/600",
+    src: "projeto05.jpg",
     alt: "Projeto 5",
     description: "Construção de ponte",
     size: "small",
   },
   {
     type: "image",
-    src: "projeto1.jpg",
+    src: "projeto06.jpg",
     alt: "Projeto 6",
     description: "Revitalização de praça pública",
     size: "small",
@@ -144,12 +144,13 @@ export default function Gallery() {
                         sizes="(max-width: 1280px) 100vw, 1280px"
                         priority
                       />
-                    ) : (
-                      <video 
-                        controls 
-                        poster={item.poster} 
+                      ) : (
+                      <video                   
+                        controls
+                        poster={item.poster}
                         className="w-full h-full"
                         preload="metadata"
+                        autoPlay
                       >
                         <source src={item.src} type="video/mp4" />
                         Seu navegador não suporta a reprodução de vídeos.
