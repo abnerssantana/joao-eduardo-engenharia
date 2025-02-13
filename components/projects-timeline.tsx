@@ -4,6 +4,24 @@ import { Calendar, Building2, MapPin, Building, HardHat, Wrench, Store, Briefcas
 
 const projects = [
   {
+    year: "2024",
+    title: "Casa em Condomínio Fechado",
+    location: "São José do Rio Preto/SP",
+    description: "Construção de residência de alto padrão em condomínio fechado",
+    details: [
+      "160m² de área construída em terreno de 290m²",
+      "3 suítes sendo uma master com closet",
+      "Escritório, lavabo e banheiro externo",
+      "Sala de TV, cozinha gourmet com cooktop e coifa",
+      "Projeto luminotécnico completo",
+      "Pontos de ar condicionado em todos os ambientes",
+      "Acabamento premium com armários e pintura externa em cristal"
+    ],
+    icon: Building2,
+    type: "Residencial",
+    period: "Janeiro/2024"
+  },
+  {
     year: "2020",
     title: "Edifício Ankaá",
     location: "São José do Rio Preto/SP",

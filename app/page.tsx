@@ -43,13 +43,13 @@ export default function Home() {
           <Services />
         </div>
         <div className="relative z-0">
-          <ProjectManagement />
+          <Gallery />
         </div>
         <div className="relative z-0">
           <ProjectsTimeline />
         </div>
         <div className="relative z-0">
-          <Gallery />
+          <ProjectManagement />
         </div>
         <div className="relative z-0">
           <Testimonials />
