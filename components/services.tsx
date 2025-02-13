@@ -6,17 +6,17 @@ import { Building2, HardHat, Wrench } from "lucide-react"
 
 const services = [
   {
-    icon: <Building2 className="h-12 w-12 text-custom-light" />,
+    icon: <Building2 className="h-12 w-12 text-[#7bb7a1]" />,
     title: "Gerenciamento de Obras",
     description: "Gestão completa do seu projeto, desde o planejamento até a entrega final.",
   },
   {
-    icon: <HardHat className="h-12 w-12 text-custom-light" />,
+    icon: <HardHat className="h-12 w-12 text-[#7bb7a1]" />,
     title: "Construções",
     description: "Execução de projetos residenciais e comerciais com excelência e qualidade.",
   },
   {
-    icon: <Wrench className="h-12 w-12 text-custom-light" />,
+    icon: <Wrench className="h-12 w-12 text-[#7bb7a1]" />,
     title: "Reformas",
     description: "Transformação e renovação de espaços com soluções modernas e eficientes.",
   },
@@ -69,7 +69,7 @@ export default function Services() {
               <Card className="bg-card hover:shadow-lg transition-shadow duration-300 border-primary/10">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-4">{service.icon}</div>
-                  <CardTitle className="text-custom-light">{service.title}</CardTitle>
+                  <CardTitle className="text-[#7bb7a1]">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-custom-light text-center">{service.description}</CardDescription>
