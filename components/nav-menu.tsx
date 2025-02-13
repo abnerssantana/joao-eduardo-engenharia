@@ -18,7 +18,6 @@ const sections = [
   { name: "Projetos", href: "#projects-timeline" },
   { name: "Galeria", href: "#gallery" },
   { name: "Depoimentos", href: "#testimonials" },
-  { name: "Equipe", href: "#team" },
   { name: "Contato", href: "#contact" },
 ]
 
@@ -56,7 +55,7 @@ export function NavMenu() {
               <Link
                 key={section.name}
                 href={section.href}
-                className="text-foreground hover:text-primary transition-colors text-lg"
+                className="text-foreground hover:text-primary active:bg-accent focus:bg-accent transition-colors text-lg px-4 py-2 rounded-md"
               >
                 {section.name}
               </Link>

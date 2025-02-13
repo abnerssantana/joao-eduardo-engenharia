@@ -33,7 +33,7 @@ const projectManagementInfo = [
 
 export default function ProjectManagement() {
   return (
-    <section id="project-management" className="py-20 px-4 bg-background">
+    <section id="project-management" className="py-20 px-4 bg-secondary">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

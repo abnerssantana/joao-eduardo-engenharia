@@ -10,21 +10,21 @@ const testimonials = [
     role: "Diretor de Operações, TechCorp",
     content:
       "A João Eduardo Engenharia superou todas as nossas expectativas. Seu compromisso com a qualidade e prazos é impressionante.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/perfil1.jpg?height=40&width=40",
   },
   {
     name: "Ana Rodrigues",
     role: "Proprietária, Residencial Bela Vista",
     content:
       "Estamos extremamente satisfeitos com o resultado final do nosso condomínio. A atenção aos detalhes foi excepcional.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/perfil2.jpg?height=40&width=40",
   },
   {
     name: "Marcelo Santos",
     role: "Secretário de Infraestrutura, Prefeitura Municipal",
     content:
       "A equipe da João Eduardo Engenharia demonstrou grande expertise na revitalização do nosso centro histórico. Um trabalho primoroso.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/perfil3.jpg?height=40&width=40",
   },
 ]
 

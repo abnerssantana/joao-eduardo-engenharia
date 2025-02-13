@@ -45,7 +45,7 @@ const itemVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 px-4 bg-custom-light">
+    <section id="services" className="py-20 px-4 bg-secondary">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function Services() {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-custom-dark border-custom-light/20 hover:border-custom-light/40 transition-colors">
+              <Card className="bg-card hover:shadow-lg transition-shadow duration-300 border-primary/10">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-4">{service.icon}</div>
                   <CardTitle className="text-custom-light">{service.title}</CardTitle>
