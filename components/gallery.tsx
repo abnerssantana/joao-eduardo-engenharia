@@ -70,7 +70,7 @@ const itemVariants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 }
 
-const getSizeClasses = (size) => {
+const getSizeClasses = (size: any) => {
   switch (size) {
     case "large":
       return "col-span-2 row-span-2"
@@ -79,7 +79,7 @@ const getSizeClasses = (size) => {
     default:
       return "col-span-1 row-span-1"
   }
-}
+};
 
 export default function Gallery() {
   return (
@@ -114,7 +114,7 @@ export default function Gallery() {
                     <CardContent className="p-0 h-full relative">
                       <div className="relative w-full h-full">
                         <Image
-                          src={item.type === "image" ? item.src : item.poster}
+                          src={item.type === "image" ? item.src ?? "" : item.poster ?? ""}
                           alt={item.alt || item.description}
                           className="transition-transform duration-300 group-hover:scale-110 object-cover"
                           fill
