@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import LogoAnimation from "./logo-animation"
+import Image from "next/image"
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react"
 
 export default function Footer() {
@@ -22,11 +22,17 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col items-center md:items-start"
           >
-            <div className="scale-75">
-              <LogoAnimation />
+            <div className="">
+            <Image
+              src="/Logotipo.png"
+              width={248}
+              height={248}
+              alt="Logo"
+              quality={100}
+            />
             </div>
-            <h3 className="text-xl font-light mt-4 text-foreground">JOÃO EDUARDO</h3>
-            <p className="text-primary">Engenharia</p>
+            <h3 className="text-xl font-light mt-4 lg:ml-10 text-foreground">JOÃO EDUARDO</h3>
+            <p className="text-primary lg:ml-10">Engenharia</p>
           </motion.div>
 
           <motion.div
