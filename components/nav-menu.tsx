@@ -10,7 +10,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
-import { Logo } from "./logo"
 
 const sections = [
   { name: "Serviços", href: "#services" },
@@ -25,7 +24,7 @@ export function NavMenu() {
   return (
     <div className="w-full flex justify-between items-center">
       <Link href="/" className="text-primary">
-        <Logo />
+      <h2 className="text-1xl font-light tracking-wider text-white drop-shadow-lg">JOÃO EDUARDO</h2>
       </Link>
 
       {/* Desktop Navigation */}
