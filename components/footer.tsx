@@ -22,7 +22,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col items-center md:items-start"
           >
-            <div className="">
+            <div className="-mt-10">
             <Image
               src="/logo.png"
               width={248}
@@ -31,8 +31,6 @@ export default function Footer() {
               quality={100}
             />
             </div>
-            <h3 className="text-xl font-light mt-4 lg:ml-10 text-foreground">JOÃO EDUARDO</h3>
-            <p className="text-primary lg:ml-10">Engenharia</p>
           </motion.div>
 
           <motion.div
