@@ -93,7 +93,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-lg md:text-xl text-gray-200 max-w-96 mx-auto drop-shadow-md">
             Construindo o futuro com engenharia de excelência
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ export default function Hero() {
         >
           <Button
             variant="outline"
-            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm"
+            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm mb-4"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
             Conheça Nossos Serviços

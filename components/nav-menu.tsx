@@ -22,9 +22,11 @@ const sections = [
 
 export function NavMenu() {
   return (
-    <div className="w-full flex justify-between items-center">
+    <div className="w-full flex justify-between items-center transition-colors">
       <Link href="/" className="text-primary">
-      <h2 className="text-1xl font-light tracking-wider text-white drop-shadow-lg">JOÃO EDUARDO</h2>
+      <h2 className="text-1xl font-light tracking-wider text-[#201f1e] dark:text-[#7ba993]">
+        <strong>JOÃO EDUARDO</strong>
+      </h2>
       </Link>
 
       {/* Desktop Navigation */}
