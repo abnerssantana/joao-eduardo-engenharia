@@ -110,7 +110,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-12 pt-4 border-border text-center text-primary"
+          className="mt-12 pt-4 border-border text-center text-primary text-xs"
         >
           <p>&copy; {new Date().getFullYear()} João Eduardo Engenharia. Todos os direitos reservados.</p>
         </motion.div>

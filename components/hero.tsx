@@ -75,7 +75,7 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.8 }}
           className="mt-4 sm:mt-6 md:mt-8 space-y-3 sm:space-y-4 md:space-y-6"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wider text-white drop-shadow-lg">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-1xl font-light tracking-wider text-white drop-shadow-lg">
             JOÃO EDUARDO
             <span
               className="block text-base sm:text-lg md:text-xl lg:text-2xl text-primary mt-2 font-medium"
@@ -86,7 +86,7 @@ export default function Hero() {
               Engenharia
             </span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto drop-shadow-md px-2 sm:px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-200 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto drop-shadow-md px-2 sm:px-4">
             Construindo o futuro com engenharia de excelência
           </p>
         </motion.div>

@@ -44,7 +44,7 @@ const AnimatedLogo = () => {
         strokeMiterlimit="2"
         clipRule="evenodd"
         viewBox="0 0 1021 1179"
-        className="h-52 lg:h-72 sm:h-52"
+        className="h-52 lg:h-60 lg:mt-4 sm:h-52"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
