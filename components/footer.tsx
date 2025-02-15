@@ -24,7 +24,7 @@ export default function Footer() {
           >
             <div className="">
             <Image
-              src="/Logotipo.png"
+              src="/logo.png"
               width={248}
               height={248}
               alt="Logo"
