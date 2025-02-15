@@ -58,7 +58,7 @@ export default function Hero() {
         initial={{ y: 0 }}
         animate={{ y: isVisible ? 0 : -100 }}
         transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 right-0 p-4 bg-background/80-sm z-10"
+        className="fixed top-0 left-0 right-0 p-4 bg-background/80 backdrop-blur-sm z-10"
       >
         <div className="container mx-auto flex justify-between items-center">
           <NavMenu />
@@ -93,7 +93,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-200 max-w-96 mx-auto drop-shadow-md">
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
             Construindo o futuro com engenharia de excelência
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ export default function Hero() {
         >
           <Button
             variant="outline"
-            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm mb-4"
+            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
             Conheça Nossos Serviços
