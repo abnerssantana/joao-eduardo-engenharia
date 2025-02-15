@@ -6,7 +6,7 @@ import LogoAnimation from "./logo-animation"
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
-import NavMenu from "./nav-menu"
+import { NavMenu } from "./nav-menu"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(true)
@@ -60,8 +60,9 @@ export default function Hero() {
         transition={{ duration: 0.3 }}
         className="fixed top-0 left-0 right-0 p-4 bg-background/80 backdrop-blur-sm z-10"
       >
-        <div className="container mx-auto w-3xl flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center">
           <NavMenu />
+          <ThemeToggle />
         </div>
       </motion.div>
 
