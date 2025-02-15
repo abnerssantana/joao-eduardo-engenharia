@@ -35,7 +35,7 @@ const AnimatedLogo = () => {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center p-4">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
@@ -44,11 +44,12 @@ const AnimatedLogo = () => {
         strokeMiterlimit="2"
         clipRule="evenodd"
         viewBox="0 0 1021 1179"
-        className="h-96"
+        className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
+        {/* Rest of the SVG paths remain the same */}
         {/* Dark paths - #201F1E */}
         <motion.path
           fill="#201F1E"
@@ -90,8 +91,6 @@ const AnimatedLogo = () => {
           variants={pathVariants}
           custom={5}
         />
-
-        {/* Teal paths - #7BA993 */}
         <motion.path
           fill="#7BA993"
           fillRule="nonzero"
@@ -113,8 +112,6 @@ const AnimatedLogo = () => {
           variants={pathVariants}
           custom={8}
         />
-
-        {/* Gray paths - #605F5F */}
         <motion.path
           fill="#605F5F"
           fillRule="nonzero"
@@ -149,8 +146,6 @@ const AnimatedLogo = () => {
           variants={pathVariants}
           custom={13}
         />
-
-        {/* Dark green paths - #516E5E */}
         <motion.path
           fill="#516E5E"
           fillRule="nonzero"
@@ -158,8 +153,6 @@ const AnimatedLogo = () => {
           variants={pathVariants}
           custom={14}
         />
-
-        {/* Light gray paths - #949392 */}
         <motion.path
           fill="#949392"
           fillRule="nonzero"
