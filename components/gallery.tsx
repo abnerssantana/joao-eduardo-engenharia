@@ -73,13 +73,13 @@ const itemVariants = {
 const getSizeClasses = (size: any) => {
   switch (size) {
     case "large":
-      return "col-span-2 row-span-2"
+      return "md:col-span-2 md:row-span-2 row-span-2"
     case "medium":
-      return "col-span-1 row-span-2"
+      return "md:col-span-1 md:row-span-2 row-span-2"
     default:
-      return "col-span-1 row-span-1"
+      return "md:col-span-1 md:row-span-1 row-span-1"
   }
-};
+}
 
 export default function Gallery() {
   return (
@@ -100,7 +100,7 @@ export default function Gallery() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ staggerChildren: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4"
         >
           {galleryItems.map((item, index) => (
             <motion.div
@@ -144,8 +144,8 @@ export default function Gallery() {
                         sizes="(max-width: 1280px) 100vw, 1280px"
                         priority
                       />
-                      ) : (
-                      <video                   
+                    ) : (
+                      <video
                         controls
                         poster={item.poster}
                         className="w-full h-full"

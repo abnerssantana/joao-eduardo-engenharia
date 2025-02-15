@@ -22,17 +22,15 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col items-center md:items-start"
           >
-            <div className="">
+            <div className="-mt-10">
             <Image
-              src="/Logotipo.png"
+              src="/logo.png"
               width={248}
               height={248}
               alt="Logo"
               quality={100}
             />
             </div>
-            <h3 className="text-xl font-light mt-4 lg:ml-10 text-foreground">JOÃO EDUARDO</h3>
-            <p className="text-primary lg:ml-10">Engenharia</p>
           </motion.div>
 
           <motion.div
@@ -112,7 +110,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-12 pt-4 border-border text-center text-primary"
+          className="mt-12 pt-4 border-border text-center text-primary text-xs"
         >
           <p>&copy; {new Date().getFullYear()} João Eduardo Engenharia. Todos os direitos reservados.</p>
         </motion.div>

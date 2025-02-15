@@ -7,7 +7,7 @@ import { Building2, HardHat, Wrench } from "lucide-react"
 const services = [
   {
     icon: <Building2 className="h-12 w-12 text-[#7bb7a1]" />,
-    title: "Gerenciamento de Obras",
+    title: "Gerenciamento",
     description: "Gestão completa do seu projeto, desde o planejamento até a entrega final.",
   },
   {

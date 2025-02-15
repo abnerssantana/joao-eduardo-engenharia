@@ -10,7 +10,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
-import { Logo } from "./logo"
 
 const sections = [
   { name: "Serviços", href: "#services" },
@@ -23,13 +22,15 @@ const sections = [
 
 export function NavMenu() {
   return (
-    <div className="w-full flex justify-between items-center">
+    <div className="w-full flex justify-between items-center transition-colors">
       <Link href="/" className="text-primary">
-        <Logo />
+      <h2 className="text-1xl font-light tracking-wider text-[#201f1e] dark:text-[#7ba993]">
+        <strong>JOÃO EDUARDO</strong>
+      </h2>
       </Link>
 
       {/* Desktop Navigation */}
-      <NavigationMenu className="hidden md:flex mx-auto">
+      <NavigationMenu className="hidden md:flex mx-auto w-max">
         <NavigationMenuList>
           {sections.map((section) => (
             <NavigationMenuItem key={section.name}>
