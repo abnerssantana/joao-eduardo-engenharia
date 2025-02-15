@@ -6,27 +6,27 @@ import Image from "next/image"
 
 const projectManagementInfo = [
   {
-    title: "Complexidade da Construção",
+    title: "Desafios do Gerenciamento",
     content:
-      "Construir ou reformar um imóvel envolve uma série de etapas que exigem coordenação, planejamento e execução minuciosa. A complexidade vai além da simples execução de um projeto, englobando desde a escolha dos materiais até o cumprimento de prazos, gestão de mão de obra e adequação orçamentária.",
+      "Gerenciar uma obra envolve superar diversos obstáculos que podem impactar o sucesso do projeto. O controle de custos exige planejamento para evitar despesas extras e manter o orçamento equilibrado. O cumprimento de prazos depende de um cronograma eficiente e de uma execução organizada. A coordenação de equipes é fundamental para evitar falhas de comunicação e retrabalhos. A gestão da segurança no canteiro de obras deve ser rigorosa, garantindo a proteção dos trabalhadores e o cumprimento das normas.",
     image: "/complexidade.jpg?height=400&width=600",
   },
   {
-    title: "Desafios do Gerenciamento",
+    title: "Complexidade da Construção",
     content:
-      "Gerenciamento de custos, cumprimento de prazos, coordenação de equipes e segurança do trabalho são alguns dos principais desafios enfrentados em uma obra. Um gerenciamento inadequado pode levar a custos extras, atrasos, retrabalhos e riscos à segurança dos trabalhadores.",
+      "Construir ou reformar um imóvel envolve uma série de etapas que exigem coordenação, planejamento e execução minuciosa. A complexidade vai além da simples execução de um projeto, englobando desde a escolha dos materiais até o cumprimento de prazos, gestão de mão de obra e adequação orçamentária.",
     image: "/desafios.jpg?height=400&width=600",
   },
   {
     title: "Importância do Gerenciamento",
     content:
-      "O gerenciamento de obras não é apenas uma questão de garantir que o projeto seja concluído, mas sim de assegurar que ele seja executado da forma mais eficiente possível. Sem um gerenciamento adequado, os riscos de erros, atrasos e aumento de custos aumentam significativamente.",
+      "O gerenciamento de obras é essencial para garantir que todas as etapas do projeto ocorram com eficiência e qualidade. Uma boa gestão reduz riscos, como erros de execução, atrasos no cronograma e aumento de custos. Além disso, proporciona uma visão clara do andamento da obra, facilitando a tomada de decisões e o cumprimento das expectativas do cliente.",
     image: "/importancia.jpg?height=400&width=600",
   },
   {
     title: "Benefícios do Gerenciamento Profissional",
     content:
-      "Um gerenciamento profissional garante eficiência no uso de recursos, visão estratégica do projeto, tomada de decisão rápida e assertiva, e maior satisfação do cliente. Isso resulta em obras entregues no prazo, dentro do orçamento e com alta qualidade.",
+      "O gerenciamento profissional garante o uso eficiente de recursos, otimizando materiais, mão de obra e equipamentos. Com uma gestão estratégica, é possível antecipar problemas e propor soluções antes que afetem o projeto. Decisões rápidas e assertivas mantêm a qualidade, o prazo e o orçamento sob controle. Além de assegurar uma execução eficiente, o bom gerenciamento fortalece a confiança do cliente e abre portas para novas oportunidades.",
     image: "/beneficio.jpg?height=400&width=600",
   },
 ]
@@ -56,7 +56,7 @@ export default function ProjectManagement() {
               className={`${index === 0 ? "md:col-span-2 md:row-span-2" : ""} ${index === 3 ? "md:col-span-2" : ""}`}
             >
               <Card className="overflow-hidden h-full flex flex-col">
-              <div className={`relative ${index === 0 ? "h-80 md:h-[520px]" : "h-48 md:h-64"}`}>
+                <div className={`relative ${index === 0 ? "h-80 md:h-[520px]" : "h-48 md:h-64"}`}>
                   <Image src={info.image || "/placeholder.svg"} alt={info.title} layout="fill" objectFit="cover" />
                 </div>
                 <CardHeader>

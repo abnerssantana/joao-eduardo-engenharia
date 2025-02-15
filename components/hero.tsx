@@ -99,7 +99,7 @@ export default function Hero() {
         >
           <Button
             variant="outline"
-            className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm mb-4 py-2 px-4 sm:py-3 sm:px-6"
+            className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 sm:py-3 sm:px-6"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
             Conheça Nossos Serviços
