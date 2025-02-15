@@ -35,7 +35,7 @@ export default function Hero() {
   }, [lastScrollY])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative bg-background text-foreground pt-16 md:pt-20 z-0">
+    <section className="min-h-screen flex flex-col items-center justify-center relative bg-background text-foreground py-16 md:py-20 z-0">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -100,7 +100,7 @@ export default function Hero() {
         >
           <Button
             variant="outline"
-            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm"
+            className="text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm mb-4"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
             Conheça Nossos Serviços
