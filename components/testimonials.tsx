@@ -39,7 +39,7 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-light text-center mb-12 text-foreground"
         >
-          O Que Nossos Clientes Dizem
+          O que nossos clientes dizem
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
