@@ -1,34 +1,45 @@
 "use client"
-
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Building2, MapPin, Building } from "lucide-react"
+import { Calendar, Building2, MapPin, Building, HardHat } from "lucide-react"
 
 const projects = [
   {
-    year: "2023",
-    title: "Edifício Corporativo Sustentável",
-    description: "Construção de um edifício de escritórios com certificação LEED Gold.",
-    icon: Building2
-  },
-  {
-    year: "2022",
-    title: "Revitalização de Centro Histórico",
-    description: "Restauração e modernização de um quarteirão histórico no centro da cidade.",
-    icon: MapPin
-  },
-  {
-    year: "2021",
-    title: "Complexo Residencial Inteligente",
-    description: "Desenvolvimento de um condomínio com 200 unidades e tecnologia de automação residencial.",
+    year: "2020",
+    title: "Edifício Ankaá",
+    description: "Gestão do término da construção de edifício residencial de alto padrão com 32 unidades em São José do Rio Preto.",
     icon: Building2
   },
   {
     year: "2020",
-    title: "Ponte Estaiada",
-    description: "Projeto e construção de uma ponte estaiada de 500 metros sobre o Rio Grande.",
+    title: "Mercado Livre",
+    description: "Gerenciamento de ampliação de escritório e área de vivência no Centro de Distribuição em São José do Rio Preto.",
     icon: Building
   },
+  {
+    year: "2019-2020",
+    title: "Martrip Alimentos",
+    description: "Gerenciamento total de reforma e reforço estrutural do antigo Frigorífico Guapiassuíno em Guapiaçu/SP.",
+    icon: HardHat
+  },
+  {
+    year: "2019",
+    title: "Decathlon",
+    description: "Restauração e pintura externa, substituição de painéis luminosos e sistema de iluminação em São José do Rio Preto.",
+    icon: Building
+  },
+  {
+    year: "2013-2016",
+    title: "Tessler Engenharia",
+    description: "Gerenciamento de diversas obras comerciais e residenciais em São José do Rio Preto/SP.",
+    icon: MapPin
+  },
+  {
+    year: "2009-2012",
+    title: "Later Engenharia",
+    description: "Administração de obras de shoppings e edifícios residenciais de alto padrão em Goiânia/GO.",
+    icon: MapPin
+  }
 ]
 
 export default function ProjectsTimeline() {
@@ -44,11 +55,8 @@ export default function ProjectsTimeline() {
         >
           Linha do Tempo de Projetos
         </motion.h2>
-
         <div className="relative">
-          {/* Vertical line - hidden on mobile */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/30 hidden md:block" />
-
           {projects.map((project, index) => {
             const Icon = project.icon
             return (
@@ -62,14 +70,12 @@ export default function ProjectsTimeline() {
                   index % 2 === 0 ? "md:justify-start" : "md:justify-end"
                 } mb-12 relative`}
               >
-                {/* Timeline dot - centered on mobile, alternating sides on desktop */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:block z-10">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-
-                <Card 
+                <Card
                   className={`w-full md:w-5/12 ${
                     index % 2 === 0 ? "md:mr-12" : "md:ml-12"
                   } bg-card hover:shadow-lg transition-shadow duration-300 border-primary/10`}

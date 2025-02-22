@@ -1,9 +1,8 @@
-"use client"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import LogoAnimation from "./logo-animation"
 import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Award, Building2, ClipboardCheck } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { NavMenu } from "./nav-menu"
 
@@ -32,6 +31,24 @@ export default function Hero() {
       }
     }
   }, [lastScrollY])
+
+  const stats = [
+    {
+      icon: <Building2 className="w-6 h-6" />,
+      value: "+15",
+      label: "Anos de Experiência",
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      value: "+50",
+      label: "Projetos Concluídos",
+    },
+    {
+      icon: <ClipboardCheck className="w-6 h-6" />,
+      value: "+100k",
+      label: "m² Gerenciados",
+    },
+  ]
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative bg-background text-foreground py-8 sm:py-12 md:py-16 lg:py-20">
@@ -75,7 +92,7 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.8 }}
           className="mt-4 sm:mt-6 md:mt-8 space-y-3 sm:space-y-4 md:space-y-6"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-1xl font-light tracking-wider text-white drop-shadow-lg">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wider text-white drop-shadow-lg">
             JOÃO EDUARDO
             <span
               className="block text-base sm:text-lg md:text-xl lg:text-2xl text-primary mt-2 font-medium"
@@ -86,20 +103,43 @@ export default function Hero() {
               Engenharia
             </span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-200 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto drop-shadow-md px-2 sm:px-4">
-            Construindo o futuro com engenharia de excelência
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mx-auto drop-shadow-md py-4 px-2 sm:px-4">
+            Excelência em gerenciamento de obras e construções de alto padrão
           </p>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5 + index * 0.2, duration: 0.5 }}
+                className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg w-full max-w-screen-md mx-auto"
+              >
+                <div className="text-primary mb-2">
+                  {stat.icon}
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-300">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-          className="mt-6 sm:mt-8 md:mt-10 lg:mt-12"
+          transition={{ delay: 2.3, duration: 0.5 }}
+          className="mt-8 sm:mt-10 md:mt-12 lg:mt-16"
         >
           <Button
             variant="outline"
-            className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 sm:py-3 sm:px-6"
+            className="w-full max-w-screen-md text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 sm:py-3 sm:px-6"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
             Conheça Nossos Serviços
