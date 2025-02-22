@@ -135,14 +135,17 @@ export default function Hero() {
           transition={{ delay: 2.3, duration: 0.5 }}
           className="mt-8 sm:mt-10 md:mt-12 lg:mt-16"
         >
-          <Button
-            variant="outline"
-            className="w-full max-w-screen-md text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 sm:py-3 sm:px-6"
-            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Conheça Nossos Serviços
-            <ArrowDown className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              variant="outline"
+              className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 flex items-center"
+              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Conheça Nossos Serviços
+              <ArrowDown className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+          </div>
+
         </motion.div>
       </motion.div>
     </section>
