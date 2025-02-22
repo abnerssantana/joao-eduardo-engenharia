@@ -95,7 +95,7 @@ export default function Testimonials() {
         </div>
 
         {/* Partners Section */}
-        <Separator className="my-16" />
+        <Separator className="my-12 dark:bg-primary-foreground" />
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -78,7 +78,7 @@ const features = [
 
 export default function Specialties() {
   return (
-    <section id="specialties" className="py-20 px-4 bg-background">
+    <section id="servicos" className="py-20 px-4 bg-primary-foreground">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

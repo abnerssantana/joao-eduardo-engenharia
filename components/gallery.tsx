@@ -111,7 +111,7 @@ const getSizeClasses = (size: any) => {
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 px-4 bg-secondary">
+    <section id="gallery" className="py-20 px-4 bg-primary-foreground">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

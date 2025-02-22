@@ -9,6 +9,7 @@ import {
   FileText,
   Wrench
 } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
 
 const managementInfo = [
   {
@@ -82,7 +83,7 @@ const keyFeatures = [
 
 export default function ProjectManagement() {
   return (
-    <section id="project-management" className="py-20 px-4 bg-secondary">
+    <section id="project-management" className="pt-20 pb-6 px-4 bg-secondary">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -129,7 +130,7 @@ export default function ProjectManagement() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {keyFeatures.map((feature, index) => (
             <motion.div
               key={index}
@@ -137,7 +138,7 @@ export default function ProjectManagement() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-muted p-6 rounded-lg"
+              className="bg-primary-foreground  p-6 rounded-lg"
             >
               <div className="text-primary mb-3">
                 {feature.icon}
@@ -148,6 +149,8 @@ export default function ProjectManagement() {
           ))}
         </div>
       </div>
+      <Separator className="my-12 dark:bg-primary-foreground" />
     </section>
+    
   )
 }
