@@ -139,7 +139,7 @@ export default function Hero() {
             <Button
               variant="outline"
               className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 flex items-center"
-              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" })}
             >
               Conheça Nossos Serviços
               <ArrowDown className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
