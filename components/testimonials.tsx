@@ -102,7 +102,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <h2 className="text-2xl font-light mb-4">Grandes Parceiros</h2>
           <p className="text-muted-foreground">
@@ -110,30 +110,31 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center"
-            >
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full aspect-[2/1] flex items-center justify-center">
-                <img
-                  src={partner.logo}
-                  alt={`Logo ${partner.name}`}
-                  className="max-w-full h-auto"
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-lg font-medium text-foreground">{partner.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{partner.description}</p>
-                {/* Removed the non-existent 'project' property */}
-              </div>
-            </motion.div>
-          ))}
+        <div className="w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {partners.map((partner, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col items-center"
+              >
+                <div className="bg-white p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full h-44 aspect-[4/2] flex items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={`Logo ${partner.name}`}
+                    className="max-w-full max-h-40 object-contain p-10"
+                  />
+                </div>
+                <div className="mt-2 text-center">
+                  <h3 className="text-sm font-medium text-foreground">{partner.name}</h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">{partner.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

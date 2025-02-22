@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import LogoAnimation from "./logo-animation"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Award, Building2, ClipboardCheck } from "lucide-react"
-import { ThemeToggle } from "./theme-toggle"
 import { NavMenu } from "./nav-menu"
 
 export default function Hero() {
@@ -74,7 +73,6 @@ export default function Hero() {
       >
         <div className="w-full px-4 sm:px-6 md:px-8 lg:px-44 py-3 sm:py-4 mx-auto flex justify-between items-center">
           <NavMenu />
-          <ThemeToggle />
         </div>
       </motion.div>
 

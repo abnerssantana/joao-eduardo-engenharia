@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import { WhatsAppButton } from "./whatsapp-button"
 
 const sections = [
   { name: "Serviços", href: "#services" },
@@ -22,32 +23,39 @@ const sections = [
 
 export function NavMenu() {
   return (
-    <div className="w-full flex justify-between items-center transition-colors">
+    <div className="w-full flex items-center justify-between relative">
       <Link href="/" className="text-primary">
-      <h2 className="text-1xl font-light tracking-wider text-[#201f1e] dark:text-[#7ba993]">
-        <strong>JOÃO EDUARDO</strong>
-      </h2>
+        <h2 className="text-1xl font-light tracking-wider text-[#201f1e] dark:text-[#7ba993]">
+          <strong>JOÃO EDUARDO</strong>
+        </h2>
       </Link>
 
       {/* Desktop Navigation */}
-      <NavigationMenu className="hidden md:flex mx-auto w-max">
-        <NavigationMenuList>
-          {sections.map((section) => (
-            <NavigationMenuItem key={section.name}>
-              <Link href={section.href} legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>{section.name}</NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          ))}
-        </NavigationMenuList>
-      </NavigationMenu>
+      <div className="hidden md:flex items-center gap-4 absolute left-1/2 transform -translate-x-1/2">
+        <NavigationMenu>
+          <NavigationMenuList>
+            {sections.map((section) => (
+              <NavigationMenuItem key={section.name}>
+                <Link href={section.href} legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    {section.name}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      <div className="hidden md:block">
+        <WhatsAppButton />
+      </div>
 
       {/* Mobile Navigation */}
       <Sheet>
         <SheetTrigger asChild className="md:hidden">
           <Button variant="outline" size="icon">
             <Menu className="h-[1.2rem] w-[1.2rem]" />
-            <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
@@ -61,10 +69,12 @@ export function NavMenu() {
                 {section.name}
               </Link>
             ))}
+            <div className="pt-4">
+              <WhatsAppButton className="w-full" />
+            </div>
           </div>
         </SheetContent>
       </Sheet>
     </div>
   )
 }
-
