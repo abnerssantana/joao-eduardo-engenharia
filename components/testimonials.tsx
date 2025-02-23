@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 
 const testimonials = [
@@ -79,19 +78,7 @@ export default function Testimonials() {
             >
               <Card className="h-full bg-card border-border">
                 <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <Avatar>
-                      <AvatarFallback>
-                        {testimonial.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-primary italic">"{testimonial.content}"</p>
@@ -102,7 +89,7 @@ export default function Testimonials() {
         </div>
 
         {/* Partners Section */}
-        <Separator className="my-12 dark:bg-primary-foreground" />
+        <Separator className="my-16" />
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
