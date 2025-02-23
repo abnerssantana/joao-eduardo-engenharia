@@ -13,7 +13,7 @@ import { Menu } from "lucide-react"
 import { WhatsAppButton } from "./whatsapp-button"
 
 const sections = [
-  { name: "Serviços", href: "#services" },
+  { name: "Serviços", href: "#servicos" },
   { name: "Gerenciamento", href: "#project-management" },
   { name: "Projetos", href: "#projects-timeline" },
   { name: "Galeria", href: "#gallery" },
@@ -25,13 +25,13 @@ export function NavMenu() {
   return (
     <div className="w-full flex items-center justify-between relative">
       <Link href="/" className="text-primary">
-        <h2 className="text-1xl font-light tracking-wider text-[#201f1e] dark:text-[#7ba993]">
-          <strong>JOÃO EDUARDO</strong>
+        <h2 className="text-1xl font-semibold tracking-wider text-[#201f1e] dark:text-[#7ba993] hover:text-primary dark:hover:text-[#7ba993] cursor-pointer">
+          JOÃO EDUARDO
         </h2>
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center gap-4 absolute left-1/2 transform -translate-x-1/2">
+      <div className="hidden md:flex items-center gap-2 absolute left-1/2 transform -translate-x-1/2">
         <NavigationMenu>
           <NavigationMenuList>
             {sections.map((section) => (

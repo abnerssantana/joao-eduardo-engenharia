@@ -126,7 +126,7 @@ const projects = [
 
 export default function ProjectsTimeline() {
   return (
-    <section id="projects-timeline" className="py-20 px-4 bg-secondary">
+    <section id="projects-timeline" className="py-4 bg-secondary">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

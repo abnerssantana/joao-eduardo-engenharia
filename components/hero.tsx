@@ -71,7 +71,7 @@ export default function Hero() {
         transition={{ duration: 0.3 }}
         className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm z-10"
       >
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-44 py-3 sm:py-4 mx-auto flex justify-between items-center">
+        <div className="w-full max-w-screen-2xl px-4 sm:px-6 md:px-8 lg:px-20 py-3 sm:py-4 mx-auto flex justify-between items-center">
           <NavMenu />
         </div>
       </motion.div>
@@ -105,8 +105,8 @@ export default function Hero() {
             Excelência em gerenciamento de obras e construções de alto padrão
           </p>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+          {/* Stats Section - Hidden on mobile, visible from sm breakpoint */}
+          <div className="hidden sm:grid sm:grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -139,13 +139,12 @@ export default function Hero() {
             <Button
               variant="outline"
               className="text-sm sm:text-base text-primary border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm py-2 px-4 flex items-center"
-              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" })}
             >
               Conheça Nossos Serviços
               <ArrowDown className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
-
         </motion.div>
       </motion.div>
     </section>
