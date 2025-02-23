@@ -5,27 +5,36 @@ import { Separator } from "@/components/ui/separator"
 
 const testimonials = [
   {
-    name: "Carlos Silva",
-    role: "Diretor de Operações, TechCorp",
+    name: "Marcel Martins",
     content:
-      "A João Eduardo Engenharia superou todas as nossas expectativas. Seu compromisso com a qualidade e prazos é impressionante.",
-    avatar: "/perfil1.jpg?height=40&width=40",
+      "Trabalhei com o engenheiro da João Eduardo Engenharia e Imóveis em um projeto recente e fiquei muito satisfeito com o serviço prestado. O profissional foi altamente qualificado, comprometido com os prazos e entregou resultados de excelência.",
   },
   {
-    name: "Ana Rodrigues",
-    role: "Proprietária, Residencial Bela Vista",
+    name: "José Eduardo Perozim",
     content:
-      "Estamos extremamente satisfeitos com o resultado final do nosso condomínio. A atenção aos detalhes foi excepcional.",
-    avatar: "/perfil2.jpg?height=40&width=40",
+      "Excelente profissional!! Muito competente e com muito conhecimento!",
   },
   {
-    name: "Marcelo Santos",
-    role: "Secretário de Infraestrutura, Prefeitura Municipal",
+    name: "Pedro Biziachi",
     content:
-      "A equipe da João Eduardo Engenharia demonstrou grande expertise na revitalização do nosso centro histórico. Um trabalho primoroso.",
-    avatar: "/perfil3.jpg?height=40&width=40",
+      "Ótimo profissional, sério e dedicado. Trabalho de excelência.",
   },
-]
+  {
+    name: "Wellington Ziatti",
+    content:
+      "Profissional qualificado e prestativo. Atendeu todas as minhas expectativas. Indico sempre.",
+  },
+  {
+    name: "Lazaro Oliveira",
+    content:
+      "Fiz um trabalho com ele. Comprometido e responsável.",
+  },
+  {
+    name: "Gustavo Leite",
+    content:
+      "Responsável, criterioso e parceiro!",
+  },
+];
 
 const partners = [
   {
@@ -72,7 +81,6 @@ export default function Testimonials() {
                 <CardHeader>
                   <div className="flex items-center space-x-4">
                     <Avatar>
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                       <AvatarFallback>
                         {testimonial.name
                           .split(" ")
@@ -82,7 +90,6 @@ export default function Testimonials() {
                     </Avatar>
                     <div>
                       <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
-                      <p className="text-sm text-primary">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardHeader>
