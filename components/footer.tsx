@@ -82,10 +82,10 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-center md:text-left ml-8"
+            className="text-center md:text-left md:ml-8 w-full"
           >
             <h4 className="text-foreground font-medium mb-4">Redes Sociais</h4>
-            <div className="flex justify-center md:justify-start space-x-6">
+            <div className="flex justify-center md:justify-start items-center space-x-6">
               <Link
                 href="https://www.instagram.com/joaoeduardoengenharia/" 
                 className="text-primary hover:text-foreground transition-colors"
