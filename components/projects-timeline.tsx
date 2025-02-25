@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Calendar, Building2, MapPin, Building, HardHat, Wrench, Store, Briefcase } from "lucide-react"
+import { Calendar, Building2, MapPin, Building, HardHat, Store, Briefcase } from "lucide-react"
 
 const projects = [
   {
