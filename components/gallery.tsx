@@ -9,6 +9,54 @@ import { Play } from "lucide-react"
 const galleryItems = [
   {
     type: "image",
+    src: "/projetos/casa-2024-fachada.jpg",
+    alt: "Casa- Fachada",
+    description: "Fachada moderna",
+    size: "large",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
+    src: "/projetos/cozinha2.jpeg",
+    alt: "Casa - Cozinha",
+    description: "Cozinha integrada com ilha",
+    size: "medium",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
+    src: "/projetos/banheiro2.jpeg",
+    alt: "Casa - Banheiro",
+    description: "Banheiro com acabamento premium",
+    size: "medium",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
+    src: "/projetos/quintal.jpeg",
+    alt: "Casa - Área Externa",
+    description: "Piscina",
+    size: "large",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
+    src: "/projetos/lazer.jpeg",
+    alt: "Área de lazer",
+    description: "Área de lazer com churrasqueira",
+    size: "small",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
+    src: "/projetos/banheiro-casal.jpeg",
+    alt: "Banheiro Casal",
+    description: "Banheiro Casal",
+    size: "small",
+    project: "casa-2024"
+  },
+  {
+    type: "image",
     src: "/projetos/predio2.jpg",
     alt: "Projeto 1",
     description: "Gerenciamento de obra residencial",
@@ -47,7 +95,7 @@ const galleryItems = [
     src: "projeto04.jpg",
     alt: "Projeto 4",
     description: "Reforma de espaço comercial",
-    size: "large",
+    size: "medium",
   },
   {
     type: "image",
